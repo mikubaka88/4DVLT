@@ -17,9 +17,10 @@ Haoyang Wu<sup>1</sup>, Rui Qian<sup>2</sup>, Linfeng Zhang<sup>2,*</sup>
 ![arXiv](https://img.shields.io/badge/arXiv-Coming_Soon-B31B1B?style=flat-square)
 ![Code](https://img.shields.io/badge/Code-Coming_Soon-2F80ED?style=flat-square)
 ![Benchmark](https://img.shields.io/badge/Benchmark-Coming_Soon-7B61FF?style=flat-square)
+[![Demos](https://img.shields.io/badge/Video_Demos-Watch_Now-F2994A?style=flat-square)](#video-demos)
 [![License](https://img.shields.io/badge/License-MIT-43A047?style=flat-square)](LICENSE)
 
-[Overview](#overview) · [Instruct-4D](#instruct-4d) · [4DTrack](#4dtrack) · [Results](#results) · [Release](#release-status)
+[Overview](#overview) · [Instruct-4D](#instruct-4d) · [4DTrack](#4dtrack) · [Video Demos](#video-demos) · [Results](#results) · [Release](#release-status)
 
 </div>
 
@@ -73,6 +74,20 @@ The benchmark separates two questions that are often conflated: **did the model 
 
 The ablations reveal a metric-specific division of labor. Routing carries nearly all of the first-timestamp grounding gain, while graph structure, bidirectional decoding, and kinematic calibration are expressed more strongly through sequence-level grounding and worldline-quality metrics. The modules therefore form a coupled inference chain with different responsibilities rather than interchangeable sources of improvement.
 
+## Video Demos
+
+The following videos show complete predicted worldlines across time, metric 3D space, and synchronized camera views. Click any entry to open the corresponding MP4 directly on GitHub.
+
+| Capability | Demo |
+|:--|:--|
+| 3D Volume Geometry | [▶ Watch video](demos/4dtrack_demo_video_3D_Volume_Geometry.mp4) |
+| Disambiguation | [▶ Watch video](demos/4dtrack_demo_video_Disambiguation.mp4) |
+| Kinematic Shift | [▶ Watch video](demos/4dtrack_demo_video_Kinematic_Surprisal_nuScenes.mp4) |
+| Reverse Reasoning | [▶ Watch video](demos/4dtrack_demo_video_Reverse_Reasoning_nuScenes.mp4) |
+| Spatiotemporal Anchor | [▶ Watch video](demos/4dtrack_demo_video_Spatiotemporal_Logic.mp4) |
+| Motion Residual | [▶ Watch video](demos/4dtrack_demo_video_Stationary_Micro_Motion.mp4) |
+| Trajectory Shape | [▶ Watch video](demos/4dtrack_demo_video_Trajectory_Shape_nuScenes.mp4) |
+
 ## Results
 
 4DTrack consistently improves matched multimodal backbones under the shared Instruct-4D evaluation interface. With Qwen3.5-9B, the full framework reaches **62.68 TGA<sub>Top1</sub>**, **51.93 TGA**, **55.18 WQS**, and **85.57 CTQ**, while reducing 3D trajectory error to **3.67 m ADE<sub>3D</sub>**.
@@ -102,4 +117,3 @@ Citation metadata and download instructions will be added with the public releas
 ## License
 
 This project is released under the [MIT License](LICENSE).
-
